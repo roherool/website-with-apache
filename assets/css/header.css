@@ -1,0 +1,262 @@
+/* START HEADER */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 5.5rem;
+  padding: 0 2.5rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: auto;
+  z-index: 1000;
+}
+
+/* START BUSCA CONTA */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form img {
+  height: 3rem;
+  width: auto;
+  padding: 0.5rem;
+}
+
+#select-type {
+  background: none;
+  border: none;
+  outline: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  color: var(--neutral-500);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#input-account {
+  border: none;
+  border-bottom: 1px solid var(--neutral-300);
+  margin-left: 1rem;
+  outline: 0;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+#input-account::placeholder {
+  color: var(--neutral-300);
+  font-weight: 500;
+}
+
+/* START BUTON ABRIR CONTA */
+
+#btn-abrir-conta {
+  background-color: var(--green-500);
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: var(--neutral-300);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+
+  margin-right: 2rem;
+  padding: calc(1rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+#btn-abrir-conta:hover,
+#btn-abrir-conta:focus {
+  background-color: var(--green-600);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+#btn-abrir-conta:hover {
+  transform: translateY(-1px);
+}
+
+#btn-abrir-conta:active {
+  background-color: var(--green-500);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* START MENU WEB */
+
+#menu {
+  display: flex;
+}
+
+#menu-search {
+  display: flex;
+  background: var(--neutral-700);
+  cursor: pointer;
+  width: 5.5rem;
+  height: 5.5rem;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* START SEARCH */
+
+#menu-search:hover {
+  background: var(--neutral-900);
+}
+
+#menu-search img {
+  color: var(--neutral-300);
+  width: auto;
+  height: 2.5rem;
+}
+
+/* START MENU HAMBURGER */
+
+#menu-trigger {
+  display: flex;
+  background: var(--green-500);
+  cursor: pointer;
+  width: 5.5rem;
+  height: 5.5rem;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+#menu-trigger:hover {
+  background: var(--green-600);
+}
+
+#menu-mobile {
+  color: var(--neutral-300);
+  border-top: 3px solid;
+  width: 35px;
+}
+
+#menu-mobile::after,
+#menu-mobile::before {
+  content: "";
+  background: currentColor;
+  display: block;
+  height: 3px;
+  width: 35px;
+  margin-top: 12px;
+  transition: 0.3s;
+  position: relative;
+}
+
+#menu.active #menu-mobile::before {
+  transform: rotate(135deg);
+}
+
+#menu.active #menu-mobile::after {
+  transform: rotate(-135deg);
+  top: -10px;
+}
+
+/* START MENU ITEM HAMBURGER */
+
+#menu-item {
+  background: var(--green-500);
+  display: none;
+  flex-direction: column;
+  padding: 6rem 7rem;
+
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#menu-item a {
+  border-bottom: 2px solid rgba(212, 212, 212, 0.2);
+  border-radius: 2px;
+  color: var(--neutral-300);
+  display: block;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  padding: 2.5rem 4rem;
+  transition: 0.3s;
+}
+
+#menu-item a:hover {
+  background: var(--green-600);
+}
+
+#menu-item li a span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--neutral-300);
+  border-top: 5px solid;
+  width: 40px;
+
+  transform: rotate(135deg);
+}
+
+#menu-item li a span::after {
+  content: "";
+  background: currentColor;
+  height: 5px;
+  width: 40px;
+  margin-top: 5px;
+  transition: 0.3s;
+  position: relative;
+}
+
+#menu.active #menu-item li a span::before {
+  transform: rotate(135deg);
+}
+
+#menu.active #menu-item li a span::after {
+  transform: rotate(-135deg);
+  top: -10px;
+}
+
+#menu-item:hover {
+  visibility: visible;
+}
+
+/* START MENU-SUB-ITEM HAMBURGER */
+
+#menu-item #menu-sub-item {
+  position: absolute;
+  visibility: hidden;
+}
+
+#menu-sub-item li a {
+  color: var(--neutral-300);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* END HEADER */

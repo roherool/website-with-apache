@@ -1,0 +1,20 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"); */
+
+/* START GLOBAL STYLES */
+@import url("./global.css");
+/* END GLOBAL STYLES */
+
+/* START HEADER */
+@import url("./header.css");
+/* END HEADER */
+
+/* START MAIN */
+@import url("./main.css");
+/* END MAIN */
+
+@import url("./footer.css");
+
+/* START RESPONSIVE */
+@import url("./responsive-max-1080.css");
+
+@import url("./responsive-max-720.css");
